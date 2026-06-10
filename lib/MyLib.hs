@@ -22,6 +22,3 @@ recv (Conn con) number = connectionGet con number
 recv (Proc (_, hout, _, _)) number = case hout of
   Nothing -> error "Could not get stdout handle from process"
   Just hout' -> hGet hout' number
-
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
